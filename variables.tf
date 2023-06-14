@@ -10,21 +10,6 @@ variable "external_port" {
   default     = 80
 }
 
-variable "encrypt_volume" {
-  description = "Encrypt volume at rest"
-  type        = bool
-  default     = true
-}
-
-variable "volume_name" {
-  type = string
-
-  validation {
-    condition     = length(regexall("-", var.volume_name)) == 0
-    error_message = "Volume name must not contain hyphens."
-  }
-}
-
 variable "word_count" {
   description = "How many words to echo"
   type        = number

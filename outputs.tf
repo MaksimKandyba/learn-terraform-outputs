@@ -10,10 +10,6 @@ output "memorymb" {
   value = fly_machine.web.memorymb
 }
 
-output "volume_size_gb" {
-  value = fly_volume.exampleVolume.size
-}
-
 output "db_cpus" {
   value = fly_machine.db.cpus
 }
