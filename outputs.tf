@@ -38,3 +38,8 @@ output "db_connect_string" {
   )
   sensitive = true
 }
+
+output "lap_url" {
+  description = "URL of Linux Apache PHP"
+  value       = "https://${fly_machine.web.app}.fly.dev/"
+}
